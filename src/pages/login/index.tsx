@@ -31,9 +31,12 @@ export default function Login() {
                 return Alert.alert('Atenção','Informe os campos obrigatórios!')
             }
 
-            navigation.reset({routes:[{name:"BottomRoutes"}]})
+            if (email == 'rafaela@gmail.com' && password == '123') {
+                return navigation.reset({routes:[{name:"BottomRoutes"}]})
+            } else {
+                Alert.alert('Atenção','Senha ou e-mail inválido!')
+            }
 
-            console.log('LOGOU')
         } catch (error) {
             console.log(error)
         }finally{
